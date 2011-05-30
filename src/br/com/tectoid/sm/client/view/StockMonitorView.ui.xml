@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		.title {
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 24px;
+		}
+		.horizontalPanel {
+			line-height: 30px;
+		}
+		.stockNameLabel {
+			margin-right: 5px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel>
+			<g:Label ui:field="title" styleName="{style.title}"/>
+			<g:HorizontalPanel styleName="{style.horizontalPanel}">
+				<g:Label ui:field="stockNameLabel" styleName="{style.stockNameLabel}"/>
+				<g:TextBox ui:field="stockName"/>
+				<g:Button ui:field="addButton"/>
+			</g:HorizontalPanel>
+			<g:FlexTable ui:field="stocksTable"/>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
